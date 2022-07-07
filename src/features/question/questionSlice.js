@@ -31,28 +31,32 @@ export const selectQuestionByAnswers = (state) => {
   if (!state.user.authedUser) return { authedUser: null, new: [], done: [] };
   return {
     authedUser: state.user.authedUser,
-    new: state.question.questions.filter((q) => {
-      const hasOptOne = q.optionOne.votes.find(
-        (el) => el === state.user.authedUser.id
-      );
-      const hasOptTwo = q.optionTwo.votes.find(
-        (el) => el === state.user.authedUser.id
-      );
-      if (!hasOptOne && !hasOptTwo) return true;
+    new: state.question.questions
+      .filter((q) => {
+        const hasOptOne = q.optionOne.votes.find(
+          (el) => el === state.user.authedUser.id
+        );
+        const hasOptTwo = q.optionTwo.votes.find(
+          (el) => el === state.user.authedUser.id
+        );
+        if (!hasOptOne && !hasOptTwo) return true;
 
-      return false;
-    }),
-    done: state.question.questions.filter((q) => {
-      const hasOptOne = q.optionOne.votes.find(
-        (el) => el === state.user.authedUser.id
-      );
-      const hasOptTwo = q.optionTwo.votes.find(
-        (el) => el === state.user.authedUser.id
-      );
-      if (hasOptOne || hasOptTwo) return true;
+        return false;
+      })
+      .sort((a, b) => b.timestamp - a.timestamp),
+    done: state.question.questions
+      .filter((q) => {
+        const hasOptOne = q.optionOne.votes.find(
+          (el) => el === state.user.authedUser.id
+        );
+        const hasOptTwo = q.optionTwo.votes.find(
+          (el) => el === state.user.authedUser.id
+        );
+        if (hasOptOne || hasOptTwo) return true;
 
-      return false;
-    }),
+        return false;
+      })
+      .sort((a, b) => b.timestamp - a.timestamp),
   };
 };
 
