@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionCard will match snapshot when data is passed 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+      >
+        <div
+          class="w-full flex items-center justify-between p-6 space-x-6"
+        >
+          <div
+            class="flex-1 truncate"
+          >
+            <h3
+              class="text-gray-900 text-sm font-medium truncate"
+            >
+              test
+            </h3>
+            <p
+              class="mt-1 text-gray-500 text-sm truncate"
+            >
+              Wed Jun 29 2016
+            </p>
+          </div>
+          <img
+            alt=""
+            class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"
+            src="/img/test.svg"
+          />
+        </div>
+        <div
+          class="-mt-px flex divide-x divide-gray-200"
+        >
+          <div
+            class="-ml-px w-0 flex-1 flex"
+          >
+            <a
+              class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500"
+              href="/questions/1234567890"
+            >
+              <span
+                class="ml-3"
+              >
+                Show
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+    >
+      <div
+        class="w-full flex items-center justify-between p-6 space-x-6"
+      >
+        <div
+          class="flex-1 truncate"
+        >
+          <h3
+            class="text-gray-900 text-sm font-medium truncate"
+          >
+            test
+          </h3>
+          <p
+            class="mt-1 text-gray-500 text-sm truncate"
+          >
+            Wed Jun 29 2016
+          </p>
+        </div>
+        <img
+          alt=""
+          class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"
+          src="/img/test.svg"
+        />
+      </div>
+      <div
+        class="-mt-px flex divide-x divide-gray-200"
+      >
+        <div
+          class="-ml-px w-0 flex-1 flex"
+        >
+          <a
+            class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500"
+            href="/questions/1234567890"
+          >
+            <span
+              class="ml-3"
+            >
+              Show
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`QuestionCard will match snapshot when no data is passed 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+      >
+        <div
+          class="w-full flex items-center justify-between p-6 space-x-6"
+        >
+          <span>
+            no question !!!
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
+    >
+      <div
+        class="w-full flex items-center justify-between p-6 space-x-6"
+      >
+        <span>
+          no question !!!
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
