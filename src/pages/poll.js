@@ -19,6 +19,15 @@ export default function Poll() {
   const authedUser = useSelector(selectAuthedUser);
 
   const [isLoading, setIsLoading] = React.useState(false);
+  const [answer, setAnswer] = React.useState("");
+
+  React.useEffect(() => {
+    setAnswer("");
+    if (question.optionOne.votes.find((el) => el === authedUser.id))
+      setAnswer(question.optionOne.text);
+    if (question.optionTwo.votes.find((el) => el === authedUser.id))
+      setAnswer(question.optionTwo.text);
+  }, [authedUser, question]);
 
   const handleAnswer = async (answer) => {
     setIsLoading(true);
@@ -93,6 +102,14 @@ export default function Poll() {
             <span className="text-gray-500">{question.optionTwo.text}</span>
           </p>
         </div>
+
+        {answer && (
+          <div className="mt-8">
+            <p>
+              Your choice is : <span className="text-gray-500">{answer}</span>
+            </p>
+          </div>
+        )}
       </div>
     </main>
   );
