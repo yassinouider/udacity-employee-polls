@@ -5,7 +5,7 @@ import {
   selectAllUsers,
   selectAuthedUser,
 } from "features/user/userSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 
@@ -15,6 +15,8 @@ function classNames(...classes) {
 
 export default function Login() {
   let navigate = useNavigate();
+  let [searchParams] = useSearchParams();
+
   let dispatch = useDispatch();
   const authedUser = useSelector(selectAuthedUser);
   const users = useSelector(selectAllUsers);
@@ -26,9 +28,11 @@ export default function Login() {
 
   React.useEffect(() => {
     if (authedUser) {
+      const returnURL = searchParams.get("return_path");
+      if (returnURL) return navigate(returnURL);
       navigate("/");
     }
-  }, [authedUser, navigate]);
+  }, [authedUser, navigate, searchParams]);
 
   React.useEffect(() => {
     if (!selected) setSelected(users[0]);

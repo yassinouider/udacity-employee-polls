@@ -45,9 +45,13 @@ const Layout = () => {
 
   React.useEffect(() => {
     if (!authedUser) {
-      navigate("/login");
+      if (location && location.pathname !== "/") {
+        navigate(`/login?return_path=${location.pathname}`);
+      } else {
+        navigate("/login");
+      }
     }
-  }, [authedUser, navigate]);
+  }, [authedUser, navigate, location]);
 
   const handleLogout = () => {
     dispatch(logout());

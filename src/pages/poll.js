@@ -6,11 +6,11 @@ import {
 } from "features/question/questionSlice";
 import { selectAuthedUser } from "features/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getPercentage } from "util/percentage";
+import NotFound from "./notfound";
 
 export default function Poll() {
-  let navigate = useNavigate();
   const dispatch = useDispatch();
   let { questionId } = useParams();
   const question = useSelector((state) =>
@@ -23,6 +23,7 @@ export default function Poll() {
   const [hasVote, setHasvote] = React.useState(false);
 
   React.useEffect(() => {
+    if (!question) return;
     setAnswer("");
     if (question.optionOne.votes.find((el) => el === authedUser.id)) {
       setHasvote(true);
@@ -46,12 +47,11 @@ export default function Poll() {
       })
     );
     await dispatch(fetchQuestions());
-    setIsLoading(true);
-    navigate("/", { replace: true });
+    setIsLoading(false);
   };
 
   if (!question) {
-    return <h1>Notfound</h1>;
+    return <NotFound />;
   }
 
   return (
